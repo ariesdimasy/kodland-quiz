@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    
+}
+
+.navbar { 
+    width: 100%;
+    background-color: #3498db;
+    height: 60px;
+}
+
+.container {
+    padding: 20px;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+}
+
+.form-container {
+    width: 400px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 60px;
+}
+
+.form-container h1 {
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.form-container h1 i {
+    color: #667eea;
+    margin-right: 10px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group label i {
+    color: #667eea;
+    margin-right: 8px;
+    width: 16px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.password-input {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: #667eea;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+    min-height: 16px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-btn i {
+    margin-right: 8px;
+}
+
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid #c3e6cb;
+    animation: slideIn 0.5s ease;
+}
+
+.success-message i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.table-container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.table-container h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.table-container h2 i {
+    color: #667eea;
+    margin-right: 10px;
+}
+
+/* DataTables Custom Styling */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 20px;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    padding: 5px 10px;
+    border: 2px solid #e1e5e9;
+    border-radius: 5px;
+    background: white;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    padding: 8px 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 5px;
+    background: white;
+    margin-left: 10px;
+}
+
+.dataTables_wrapper .dataTables_filter input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.dataTables_wrapper .dataTables_info {
+    margin-top: 20px;
+    color: #666;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 20px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 8px 12px;
+    margin: 0 2px;
+    border: 1px solid #e1e5e9;
+    border-radius: 5px;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+/* Table styling */
+#usersTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#usersTable thead th {
+    background: #f8f9fa;
+    color: #333;
+    font-weight: 600;
+    padding: 15px 10px;
+    text-align: left;
+    border-bottom: 2px solid #e1e5e9;
+}
+
+#usersTable tbody td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e1e5e9;
+    color: #555;
+}
+
+#usersTable tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit, .btn-delete {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-edit {
+    background: #3498db;
+    color: white;
+}
+
+.btn-edit:hover {
+    background: #2980b9;
+}
+
+.btn-delete {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .form-container {
+        position: static;
+    }
+    
+    .form-container, .table-container {
+        padding: 20px;
+    }
+    
+    .form-container h1 {
+        font-size: 24px;
+    }
+    
+    .table-container h2 {
+        font-size: 20px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .btn-edit, .btn-delete {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .form-container, .table-container {
+        padding: 15px;
+    }
+    
+    .form-group input {
+        padding: 10px 12px;
+    }
+    
+    .submit-btn {
+        padding: 12px;
+    }
+} 
